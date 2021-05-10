@@ -171,7 +171,7 @@
 
 .inspirationText {
   max-width: 30rem;
-  border: 2px solid #24285;
+  border: 2px solid #24285b;
   padding: 1rem 1rem;
 }
 
@@ -180,4 +180,17 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.redirectContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redirectionText {
+  color: #2b2e4a;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
