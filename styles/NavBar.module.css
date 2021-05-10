@@ -17,6 +17,13 @@
   margin: 0rem 1rem;
 }
 
+.floatRight {
+  display: flex;
+  flex: 1 1 0;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
 .search {
   /* width: 100%; */
   /* height: 35px; */
@@ -26,6 +33,11 @@
   outline: none;
   width: 20rem;
   font-size: 0.9rem;
+  /* position: relative; */
+}
+
+.autosuggestion {
+  position: relative;
 }
 
 .searchBox {
@@ -53,9 +65,53 @@
   margin-left: 5px;
 }
 
+.logout {
+  background-color: #b23b3b;
+  padding: 0.5rem 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 8px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.logout:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
 .searchBtn:active {
   transform: scale(0.98);
   /* Scaling button to 0.98 to its original size */
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
   /* Lowering the shadow */
+}
+
+.suggestionDiv {
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+  position: absolute;
+  z-index: 20;
+  padding: 0.8rem 1rem;
+  left: 0;
+  right: 0;
+  width: 20rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* width: 100%; */
+}
+
+.searchListItem {
+  margin: 2px 0px;
+}
+
+.search:focus {
+  border: 1px solid #24285b;
 }

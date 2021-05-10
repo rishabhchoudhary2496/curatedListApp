@@ -2,8 +2,6 @@ import NextAuth from 'next-auth'
 
 import Providers from 'next-auth/providers'
 
-console.dir(Providers)
-
 const options = {
   providers: [
     Providers.Email({

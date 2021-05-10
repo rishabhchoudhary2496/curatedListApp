@@ -3,8 +3,9 @@ import { useState } from 'react'
 import axios from 'axios'
 import router from 'next/router'
 import Navbar from '../../components/NavBar'
+import { getSession } from 'next-auth/client'
 
-const create = () => {
+const create = ({ session }) => {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [content, setContent] = useState('')
@@ -26,7 +27,7 @@ const create = () => {
   }
   return (
     <>
-      <Navbar />
+      <Navbar session={session} />
       <div className={styles.container}>
         <h1 className={styles.heading}>Create List </h1>
         <div className={styles.editorWrapper}>
@@ -83,6 +84,21 @@ const create = () => {
       </div>
     </>
   )
+}
+
+export async function getServerSideProps(context) {
+  let session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/',
+      },
+    }
+  }
+  return {
+    props: { session },
+  }
 }
 
 export default create

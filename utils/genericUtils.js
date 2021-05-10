@@ -20,6 +20,5 @@ export default function validate(schema, handler) {
 }
 
 export function jsonParse(obj) {
-  console.log('obj', obj)
   return JSON.parse(JSON.stringify(obj))
 }

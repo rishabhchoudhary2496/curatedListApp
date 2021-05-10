@@ -23,7 +23,7 @@ export default function Home({ session }) {
                 <Link href='/list'>
                   {!session ? (
                     <button onClick={signin} className={styles.button}>
-                      Get Started
+                      Sign In
                     </button>
                   ) : (
                     <button className={styles.button} onClick={signOut}>
