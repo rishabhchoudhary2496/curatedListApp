@@ -11,15 +11,12 @@ const NavBar = ({ session }) => {
 
   console.log('suggestionResult', suggestionResult)
 
-  const callSuggestionApi = async (search) => {
-    console.log('cal suggestion api', search)
-    if (!search) {
-      setSuggestionResult([])
-      return
-    }
+  const callSuggestionApi = async (searchTerm) => {
+    console.log('search state', searchTerm)
+    if (!searchTerm) return setSuggestionResult([])
     try {
       const result = await axios.get(
-        `http://localhost:3000/api/search/suggestion?q=${search}`
+        `http://localhost:3000/api/search/suggestion?q=${searchTerm}`
       )
 
       setSuggestionResult(result.data.suggestion)
@@ -30,22 +27,13 @@ const NavBar = ({ session }) => {
   }
 
   const debounceApi = useCallback(
-    debounce((nextValue) => callSuggestionApi(nextValue), 900),
+    debounce((newValue) => callSuggestionApi(newValue), 900),
     []
   )
 
-  const handleChange = (event) => {
-    let { value: nextValue } = event.target
-    if (nextValue !== '') {
-      setSearch(nextValue)
-      debounceApi(nextValue)
-    } else {
-      console.log('next value in else', nextValue)
-      setSuggestionResult([])
-      setSearch('')
-    }
-    console.log('should be in')
-    // debounceApi()
+  const handleChange = (newValue) => {
+    setSearch(newValue)
+    debounceApi(newValue)
   }
 
   return (
@@ -67,7 +55,7 @@ const NavBar = ({ session }) => {
               name='search'
               id='search'
               value={search}
-              onChange={(e) => handleChange(e)}
+              onChange={(e) => handleChange(e.target.value)}
             />
             <button className={styles.searchBtn}>Search</button>
             {suggestionResult.length > 0 ? (
