@@ -1,18 +1,21 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import Link from 'next/link'
 import styles from '../styles/NavBar.module.css'
 import { signOut } from 'next-auth/client'
 import debounce from 'lodash.debounce'
 import axios from 'axios'
+import { useRouter } from 'next/router'
 
 const NavBar = ({ session }) => {
   const [search, setSearch] = useState('')
   const [suggestionResult, setSuggestionResult] = useState([])
+  const router = useRouter()
 
-  console.log('suggestionResult', suggestionResult)
+  useEffect(() => {
+    setSuggestionResult([])
+  }, [])
 
   const callSuggestionApi = async (searchTerm) => {
-    console.log('search state', searchTerm)
     if (!searchTerm) return setSuggestionResult([])
     try {
       const result = await axios.get(
@@ -24,6 +27,26 @@ const NavBar = ({ session }) => {
       alert(error)
       console.log(error)
     }
+  }
+
+  const callSearchApi = async (searchTerm) => {
+    console.log('search', searchTerm)
+    // try {
+    //   const response = await axios.get(
+    //     `http://localhost:3000/api/search?q=${searchTerm}`
+    //   )
+
+    // console.log(response.data.searchResult)
+    // localStorage.setItem(
+    //   'searchResult',
+    //   JSON.stringify(response?.data?.searchResult)
+    // )
+
+    setSuggestionResult([])
+    router.push({
+      pathname: '/searchResult',
+      query: { searchTerm },
+    })
   }
 
   const debounceApi = useCallback(
@@ -57,11 +80,20 @@ const NavBar = ({ session }) => {
               value={search}
               onChange={(e) => handleChange(e.target.value)}
             />
-            <button className={styles.searchBtn}>Search</button>
+            <button
+              className={styles.searchBtn}
+              onClick={() => callSearchApi(search)}
+            >
+              Search
+            </button>
             {suggestionResult.length > 0 ? (
               <div className={styles.suggestionDiv}>
                 {suggestionResult.map((result) => (
-                  <li className={styles.searchListItem} key={result._id}>
+                  <li
+                    className={styles.searchListItem}
+                    key={result._id}
+                    onClick={() => callSearchApi(result?.title)}
+                  >
                     {result.title}
                   </li>
                 ))}
@@ -71,7 +103,7 @@ const NavBar = ({ session }) => {
         </div>
 
         {session && (
-          <div className={styles.floatRight}>
+          <div>
             <li>
               <button onClick={signOut} className={styles.logout}>
                 Logout

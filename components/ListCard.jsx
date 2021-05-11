@@ -1,12 +1,14 @@
 import styles from '../styles/List.module.css'
-import Image from 'next/image'
+import Link from 'next/link'
 
-const ListCard = ({ title, description, content }) => {
+const ListCard = ({ id, title, description, content }) => {
   return (
     <div className={styles.card}>
       <h3 className={styles['card-title']}>{title}</h3>
       <p className={styles['card-description']}>{description}</p>
-      <button className={styles.button}>View</button>
+      <Link href={`/list/${id}`}>
+        <button className={styles.button}>View</button>
+      </Link>
     </div>
   )
 }

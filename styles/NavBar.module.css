@@ -77,7 +77,7 @@
   cursor: pointer;
   outline: none;
   transition: 0.2s all;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -110,6 +110,11 @@
 
 .searchListItem {
   margin: 2px 0px;
+}
+
+.searchListItem:hover {
+  color: #24285b;
+  cursor: pointer;
 }
 
 .search:focus {

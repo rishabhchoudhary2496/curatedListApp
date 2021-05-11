@@ -16,6 +16,7 @@ const List = ({ data, session }) => {
           {data.list.map((listItem) => (
             <ListCard
               key={listItem._id}
+              id={listItem._id}
               title={listItem.title}
               description={listItem.description}
               content={listItem.content}
