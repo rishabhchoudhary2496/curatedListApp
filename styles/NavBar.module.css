@@ -8,7 +8,8 @@
 .list {
   display: flex;
   list-style: none;
-  padding: 0.3rem;
+  flex-grow: 1;
+  /* padding: 0rem 2rem; */
   /* background-color: burlywood; */
   align-items: center;
   flex-wrap: wrap;
@@ -16,7 +17,7 @@
 }
 
 .listItem {
-  margin: 0rem 1rem;
+  margin: 0rem 0.6rem;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -34,9 +35,10 @@
   border: 1px solid #ccc;
   padding: 0.5rem 0.6rem;
   outline: none;
-  width: 20rem;
+  width: 25rem;
   font-size: 0.9rem;
   font-family: 'Montserrat', sans-serif;
+
   /* position: relative; */
 }
 
@@ -66,8 +68,8 @@
   transition: 0.2s all;
   font-size: 1rem;
   font-weight: 600;
-  margin-left: 5px;
   font-family: 'Montserrat', sans-serif;
+  margin-left: 1.2rem;
 }
 
 .logout {
@@ -75,7 +77,6 @@
   padding: 0.5rem 1.1rem;
   color: #fff;
   text-decoration: none;
-  margin-left: 8px;
   border: none;
   border-radius: 5px;
   box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
@@ -108,7 +109,7 @@
   padding: 0.8rem 1rem;
   left: 0;
   right: 0;
-  width: 20rem;
+  width: 25rem;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   /* width: 100%; */
@@ -116,6 +117,7 @@
 
 .searchListItem {
   margin: 2px 0px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .icon {
@@ -125,6 +127,7 @@
 .searchListItem:hover {
   color: #24285b;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .search:focus {

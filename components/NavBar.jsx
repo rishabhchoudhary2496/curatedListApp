@@ -74,22 +74,25 @@ const NavBar = ({ session }) => {
 
         <div className={styles.autosuggestion}>
           <div className={styles.searchBox}>
-            <input
-              type='text'
-              className={styles.search}
-              placeholder='search'
-              name='search'
-              id='search'
-              value={search}
-              onChange={(e) => handleChange(e.target.value)}
-            />
-            <button
-              className={styles.searchBtn}
-              onClick={() => callSearchApi(search)}
-            >
-              <FontAwesomeIcon className={styles.icon} icon={faSearch} />
-              Search
-            </button>
+            <li className={styles.listItem}>
+              <input
+                type='text'
+                className={styles.search}
+                placeholder='search'
+                name='search'
+                id='search'
+                value={search}
+                onChange={(e) => handleChange(e.target.value)}
+              />
+              <button
+                className={styles.searchBtn}
+                onClick={() => callSearchApi(search)}
+              >
+                <FontAwesomeIcon className={styles.icon} icon={faSearch} />
+                Search
+              </button>
+            </li>
+
             {suggestionResult.length > 0 ? (
               <div className={styles.suggestionDiv}>
                 {suggestionResult.map((result) => (
@@ -108,7 +111,7 @@ const NavBar = ({ session }) => {
 
         {session && (
           <div>
-            <li>
+            <li className={styles.listItem}>
               <button onClick={signOut} className={styles.logout}>
                 <FontAwesomeIcon className={styles.icon} icon={faPowerOff} />
                 Logout
