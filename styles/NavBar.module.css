@@ -1,0 +1,124 @@
+.nav {
+  /* background-color: red; */
+  padding: 0;
+  margin: 0;
+  /* background-color: red; */
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  padding: 0.3rem;
+  /* background-color: burlywood; */
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.listItem {
+  margin: 0rem 1rem;
+}
+
+.floatRight {
+  display: flex;
+  flex: 1 1 0;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+.search {
+  /* width: 100%; */
+  /* height: 35px; */
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 0.5rem 0.6rem;
+  outline: none;
+  width: 20rem;
+  font-size: 0.9rem;
+  /* position: relative; */
+}
+
+.autosuggestion {
+  position: relative;
+}
+
+.searchBox {
+  /* display: flex; */
+  /* flex-grow: 1; */
+  /* flex-shrink: 1; */
+  /* background-color: royalblue; */
+  /* justify-content: flex-end; */
+  /* margin-right: 50px; */
+}
+
+.searchBtn {
+  background-color: #24285b;
+  padding: 0.5rem 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.logout {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 8px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.logout:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.searchBtn:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+
+.suggestionDiv {
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+  position: absolute;
+  z-index: 20;
+  padding: 0.8rem 1rem;
+  left: 0;
+  right: 0;
+  width: 20rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* width: 100%; */
+}
+
+.searchListItem {
+  margin: 2px 0px;
+}
+
+.searchListItem:hover {
+  color: #24285b;
+  cursor: pointer;
+}
+
+.search:focus {
+  border: 1px solid #24285b;
+}

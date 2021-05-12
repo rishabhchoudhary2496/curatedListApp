@@ -1,0 +1,16 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.3rem 0rem;
+}
+
+.heading {
+  color: #24285b;
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
