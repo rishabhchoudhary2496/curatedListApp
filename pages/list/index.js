@@ -7,13 +7,16 @@ import Pagination from 'next-pagination'
 
 const List = ({ data, session }) => {
   console.log('total Docs', data.list.totalDocs)
+
   return (
     <>
       <Navbar session={session} />
       <div className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.mainHeading}>Top Curated Lists</h1>
-          {data?.list?.docs.length == 0 && <h3>No List Found</h3>}
+          {data?.list?.docs.length == 0 && (
+            <h3 className={styles.h3}>No List Found</h3>
+          )}
           {data?.list?.docs.map((listItem) => (
             <ListCard
               key={listItem._id}
@@ -23,10 +26,12 @@ const List = ({ data, session }) => {
               content={listItem.content}
             />
           ))}
-          <Pagination
-            total={data?.list?.totalDocs}
-            sizes={[data?.list?.limit]}
-          />
+          {data?.list?.docs.length > 0 && (
+            <Pagination
+              total={data?.list?.totalDocs}
+              sizes={[data?.list?.limit]}
+            />
+          )}
         </main>
         <aside className={styles.aside}></aside>
       </div>
