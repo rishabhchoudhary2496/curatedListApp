@@ -1,4 +1,5 @@
 import mongoose, { Schema } from 'mongoose'
+import mongoosePaginate from 'mongoose-paginate-v2'
 import { object, string } from 'yup'
 
 const MODEL_NAME = 'List'
@@ -20,6 +21,8 @@ const schema = new Schema(
   },
   { timestamps: true }
 )
+
+schema.plugin(mongoosePaginate)
 
 export const validationSchema = object({
   title: string().required().min(3).max(200),

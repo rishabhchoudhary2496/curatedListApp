@@ -6,7 +6,8 @@ import styles from '../../styles/ListDetail.module.css'
 import moment from 'moment'
 
 const listDetail = ({ data, session }) => {
-  console.log('data', data)
+  console.log('data', new Date(data.createdAt))
+  console.log('date',moment().utc(data.createdAt).format('DD/MM/YYYY'))
   let router = useRouter()
   return (
     <div className={styles.container}>

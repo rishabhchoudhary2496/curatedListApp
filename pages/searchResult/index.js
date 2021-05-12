@@ -19,6 +19,7 @@ const index = ({ session, data: { searchResult } }) => {
         {searchResult.map((item) => (
           <ListItem
             key={item._id}
+            id={item._id}
             title={item.title}
             description={item.description}
             content={item.content}

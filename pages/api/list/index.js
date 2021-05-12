@@ -5,7 +5,10 @@ import validate from '../../../utils/genericUtils'
 const handler = createHandler()
 
 handler.get(async (req, res) => {
-  const list = await List.find()
+  const options = {
+    page: req.query.page || 1,
+  }
+  const list = await List.paginate({}, options)
   res.status(200).json({ list })
 })
 

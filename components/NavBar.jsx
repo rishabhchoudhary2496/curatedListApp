@@ -5,6 +5,7 @@ import { signOut } from 'next-auth/client'
 import debounce from 'lodash.debounce'
 import axios from 'axios'
 import { useRouter } from 'next/router'
+import ActiveLink from './ActiveLink'
 
 const NavBar = ({ session }) => {
   const [search, setSearch] = useState('')

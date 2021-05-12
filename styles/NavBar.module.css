@@ -2,6 +2,7 @@
   /* background-color: red; */
   padding: 0;
   margin: 0;
+  /* background-color: red; */
 }
 
 .list {
@@ -11,6 +12,7 @@
   /* background-color: burlywood; */
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .listItem {
@@ -66,7 +68,7 @@
 }
 
 .logout {
-  background-color: #b23b3b;
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 0.5rem 1.1rem;
   color: #fff;
   text-decoration: none;
