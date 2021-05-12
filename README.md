@@ -6,7 +6,9 @@ Api functionality is implemented using next js api routes
 
 ## Guide to run this project in development mode
 
-Run by using command npm run dev
+<ul>
+ <li>Run by using command npm run dev</li>
+</ul>
 
 ## Guide to run project in production mode
 
