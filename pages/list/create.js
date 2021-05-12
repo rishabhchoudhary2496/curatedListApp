@@ -18,6 +18,7 @@ const create = ({ session }) => {
         title: title,
         description: description,
         content: content,
+        creatorEmail: session?.user?.email,
       })
       router.push('/list')
     } catch (error) {

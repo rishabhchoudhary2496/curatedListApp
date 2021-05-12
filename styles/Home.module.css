@@ -6,7 +6,7 @@
   /* justify-content: center; */
   /* align-items: center; */
   height: 100vh;
-  background-color: #4cb4f5;
+  /* background-color: #4cb4f5; */
 }
 
 .main {
@@ -125,7 +125,7 @@
 .heading {
   color: #24285b;
   font-size: 2.7rem;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 .headingBox {
@@ -139,7 +139,7 @@
 
 .subText {
   font-size: 1.3rem;
-  font-style: italic;
+  /* font-style: italic; */
   color: #fff;
 }
 
@@ -154,8 +154,8 @@
   cursor: pointer;
   outline: none;
   transition: 0.2s all;
-  font-size: 0.8rem;
-  font-style: italic;
+  font-size: 0.9rem;
+  /* font-style: italic; */
 }
 
 .button:active {
@@ -166,13 +166,37 @@
 }
 
 .inspirationBox {
-  height: 100vh;
+  /* height: 100vh; */
+  /* display: flex;
+  justify-content: center; */
+  padding: 1rem 3rem;
+  background-color: #fff;
+  background-image: url('../public/lauren-sauder-1OUzxbySjlQ-unsplash.jpg');
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.img {
+  border-radius: 4px;
 }
 
 .inspirationText {
-  max-width: 30rem;
-  border: 2px solid #24285b;
-  padding: 1rem 1rem;
+  width: 50%;
+  /* display: flex; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+  /* border: 2px solid #24285b; */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.inspiration {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+.headingInspiration {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 @media (max-width: 600px) {

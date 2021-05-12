@@ -7,7 +7,9 @@ import moment from 'moment'
 
 const listDetail = ({ data, session }) => {
   console.log('data', new Date(data.createdAt))
-  console.log('date',moment().utc(data.createdAt).format('DD/MM/YYYY'))
+  console.log('date', moment().utc(data.createdAt).format('DD/MM/YYYY'))
+  const [user, mailDomain] = data?.list?.creatorEmail.split('@')
+  console.log(user, mailDomain)
   let router = useRouter()
   return (
     <div className={styles.container}>
@@ -16,7 +18,9 @@ const listDetail = ({ data, session }) => {
         <h3 className={styles.description}>{data?.list?.description}</h3>
         <p className={styles.contentText}>{data?.list?.content}</p>
         <p className={styles.dateText}>
+          {user} {'('}
           {moment(data.createdAt).format('MMM Do YYYY')}
+          {')'}
         </p>
       </div>
     </div>

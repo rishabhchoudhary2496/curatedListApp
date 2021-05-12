@@ -19,7 +19,9 @@ export default function Home({ session }) {
             <div className={styles.headingBox}>
               <div>
                 <h1 className={styles.heading}>Curate Your Awesome List</h1>
-                <p className={styles.subText}>Share it With Others</p>
+                <p className={styles.subText}>
+                  Keep Sharing Your awesome resources collections
+                </p>
                 <Link href='/list'>
                   {!session ? (
                     <button onClick={signin} className={styles.button}>
@@ -39,17 +41,26 @@ export default function Home({ session }) {
               height='500'
             ></Image>
           </div>
-          {/* <div className={styles.inspirationBox}>
-          <div>Inspiration</div>
-          <div className={styles.inspirationText}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
-            omnis quam rerum exercitationem molestias aliquid! Tenetur ipsum
-            sint deleniti porro numquam? Omnis, quam quibusdam consequatur
-            eveniet eos reprehenderit voluptas non quaerat iure reiciendis
-            veniam beatae, est commodi aliquam debitis illum nam magnam dolore
-            id! Adipisci cupiditate facere assumenda ratione laudantium!
+          <div className={styles.inspirationBox}>
+            <div className={styles.inspirationText}>
+              <p className={styles.headingInspiration}>Inspiration</p>
+              <p className={styles.inspiration}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo, omnis quam rerum exercitationem molestias aliquid!
+                Tenetur ipsum sint deleniti porro numquam? Omnis, quam quibusdam
+                consequatur eveniet eos reprehenderit voluptas non quaerat iure
+                reiciendis veniam beatae, est commodi aliquam debitis illum nam
+                magnam dolore id! Adipisci cupiditate facere assumenda ratione
+                laudantium!
+              </p>
+            </div>
+            {/* <Image
+              src='/lauren-sauder-1OUzxbySjlQ-unsplash.jpg'
+              width='600'
+              height='400'
+              className={styles.img}
+            ></Image> */}
           </div>
-        </div> */}
         </main>
       </div>
     </>

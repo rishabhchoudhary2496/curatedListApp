@@ -7,7 +7,7 @@ import Pagination from 'next-pagination'
 
 const List = ({ data, session }) => {
   console.log('total Docs', data.list.totalDocs)
-
+  console.log('session', session)
   return (
     <>
       <Navbar session={session} />
@@ -29,7 +29,7 @@ const List = ({ data, session }) => {
           {data?.list?.docs.length > 0 && (
             <Pagination
               total={data?.list?.totalDocs}
-              sizes={[data?.list?.limit]}
+              sizes={[10, data?.list?.limit]}
             />
           )}
         </main>

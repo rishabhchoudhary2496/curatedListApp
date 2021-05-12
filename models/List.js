@@ -18,6 +18,10 @@ const schema = new Schema(
       type: String,
       required: true,
     },
+    creatorEmail: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 )
@@ -28,6 +32,7 @@ export const validationSchema = object({
   title: string().required().min(3).max(200),
   description: string().required().min(3).max(5000),
   content: string().required().min(5).max(100000),
+  creatorEmail: string().required().email(),
 })
 
 export default mongoose.models[MODEL_NAME] ||
