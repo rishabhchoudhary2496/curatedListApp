@@ -14,7 +14,7 @@ Api functionality is implemented using next js api routes
     <li>SENDGRID_API_KEY (sendgrid api key for sending email for sign in)</li>
     <li>SMTP_SERVER (smtp://apikey:<ApiKey>:587)</li>
     <li>EMAIL_FROM (email from configured same in sendgrid account)</li>
-    <li>NEXTAUTH_URL (locahost url)</li>
+    <li>NEXTAUTH_URL (localhost url)</li>
 </ul>
 
 <ul>
