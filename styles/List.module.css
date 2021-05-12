@@ -1,5 +1,5 @@
 .card {
-  color: 'red';
+  /* color: 'red'; */
   background-position: center center;
   background-size: cover;
   /* width: 30rem; */
@@ -18,6 +18,10 @@
   /* height: 100vh; */
 }
 
+.icon {
+  margin-left: 5px;
+}
+
 .main {
   width: 75%;
   padding: 1rem 1.3rem;
@@ -26,6 +30,7 @@
 .mainHeading {
   text-align: center;
   color: #24285b;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .formGroup {
@@ -42,11 +47,13 @@
 .card-title {
   color: #24285b;
   font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .card-description {
   color: rgba(0, 0, 0, 0.9);
   font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .search {
@@ -56,6 +63,7 @@
   border: 1px solid #ccc;
   padding: 0.5rem 0.6rem;
   outline: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .button {
@@ -71,6 +79,7 @@
   transition: 0.2s all;
   font-size: 1.1rem;
   font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .button:active {
@@ -84,5 +93,6 @@
   text-align: center;
   font-size: 1.4rem;
   margin: 2.4rem 0rem;
+  font-family: 'Montserrat', sans-serif;
   /* background-color: red; */
 }

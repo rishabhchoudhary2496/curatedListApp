@@ -20,7 +20,7 @@ export default function Home({ session }) {
               <div>
                 <h1 className={styles.heading}>Curate Your Awesome List</h1>
                 <p className={styles.subText}>
-                  Keep Sharing Your awesome resources collections
+                  Keep Sharing Your awesome resource collections
                 </p>
                 <Link href='/list'>
                   {!session ? (

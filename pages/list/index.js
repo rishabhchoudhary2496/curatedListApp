@@ -4,6 +4,8 @@ import { jsonParse } from '../../utils/genericUtils'
 import Navbar from '../../components/NavBar'
 import { getSession } from 'next-auth/client'
 import Pagination from 'next-pagination'
+import { faClipboardList } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const List = ({ data, session }) => {
   console.log('total Docs', data.list.totalDocs)
@@ -13,7 +15,11 @@ const List = ({ data, session }) => {
       <Navbar session={session} />
       <div className={styles.container}>
         <main className={styles.main}>
-          <h1 className={styles.mainHeading}>Top Curated Lists</h1>
+          <div></div>
+          <h1 className={styles.mainHeading}>
+            Top Curated Lists
+            <FontAwesomeIcon className={styles.icon} icon={faClipboardList} />
+          </h1>
           {data?.list?.docs.length == 0 && (
             <h3 className={styles.h3}>No List Found</h3>
           )}
