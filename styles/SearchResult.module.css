@@ -8,9 +8,11 @@
   color: #24285b;
   font-size: 1.9rem;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .text {
   text-align: center;
   color: rgba(0, 0, 0, 0.7);
+  font-family: 'Montserrat', sans-serif;
 }

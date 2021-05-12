@@ -21,6 +21,13 @@
   margin-left: 2px;
 }
 
+.favIcon {
+  font-weight: 0;
+  color: red;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
 .demo-wrap {
   overflow: hidden;
   position: relative;
