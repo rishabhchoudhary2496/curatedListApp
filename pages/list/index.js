@@ -13,6 +13,7 @@ const List = ({ data, session }) => {
       <div className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.mainHeading}>Top Curated Lists</h1>
+          {data?.list?.docs.length == 0 && <h3>No List Found</h3>}
           {data?.list?.docs.map((listItem) => (
             <ListCard
               key={listItem._id}
