@@ -6,6 +6,17 @@ Api functionality is implemented using next js api routes
 
 ## Guide to run this project in development mode
 
+### Create a .env.local file
+
+<ul>
+    <li>DATABASE_URL (mongodb database url)</li>
+    <li>MONGO_DB (mongodb database name)</li>
+    <li>SENDGRID_API_KEY (sendgrid api key for sending email for sign in)</li>
+    <li>SMTP_SERVER (smtp://apikey:<ApiKey>:587)</li>
+    <li>EMAIL_FROM (email from configured same in sendgrid account)</li>
+    <li>NEXTAUTH_URL (locahost url)</li>
+</ul>
+
 <ul>
  <li>Run by using command npm run dev</li>
 </ul>
