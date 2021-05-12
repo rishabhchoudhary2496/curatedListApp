@@ -4,6 +4,8 @@ import { useSession, getSession } from 'next-auth/client'
 import { jsonParse } from '../../utils/genericUtils'
 import styles from '../../styles/ListDetail.module.css'
 import moment from 'moment'
+import { faUser, faCalendar } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const listDetail = ({ data, session }) => {
   console.log('data', new Date(data.createdAt))
@@ -18,7 +20,9 @@ const listDetail = ({ data, session }) => {
         <h3 className={styles.description}>{data?.list?.description}</h3>
         <p className={styles.contentText}>{data?.list?.content}</p>
         <p className={styles.dateText}>
+          <FontAwesomeIcon className={styles.icon} icon={faUser} />
           {user} {'('}
+          <FontAwesomeIcon className={styles.icon} icon={faCalendar} />
           {moment(data.createdAt).format('MMM Do YYYY')}
           {')'}
         </p>

@@ -6,6 +6,8 @@ import debounce from 'lodash.debounce'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import ActiveLink from './ActiveLink'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPowerOff, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = ({ session }) => {
   const [search, setSearch] = useState('')
@@ -85,6 +87,7 @@ const NavBar = ({ session }) => {
               className={styles.searchBtn}
               onClick={() => callSearchApi(search)}
             >
+              <FontAwesomeIcon className={styles.icon} icon={faSearch} />
               Search
             </button>
             {suggestionResult.length > 0 ? (
@@ -107,6 +110,7 @@ const NavBar = ({ session }) => {
           <div>
             <li>
               <button onClick={signOut} className={styles.logout}>
+                <FontAwesomeIcon className={styles.icon} icon={faPowerOff} />
                 Logout
               </button>
             </li>

@@ -17,6 +17,7 @@
 
 .listItem {
   margin: 0rem 1rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .floatRight {
@@ -35,6 +36,7 @@
   outline: none;
   width: 20rem;
   font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
   /* position: relative; */
 }
 
@@ -65,6 +67,7 @@
   font-size: 1rem;
   font-weight: 600;
   margin-left: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .logout {
@@ -81,6 +84,7 @@
   transition: 0.2s all;
   font-size: 1rem;
   font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .logout:active {
@@ -112,6 +116,10 @@
 
 .searchListItem {
   margin: 2px 0px;
+}
+
+.icon {
+  margin-right: 4px;
 }
 
 .searchListItem:hover {
