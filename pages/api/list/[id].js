@@ -6,6 +6,7 @@ const handler = createHandler()
 
 handler.get(async (req, res) => {
   const { id } = req.query
+  console.log('req', req.session)
   const list = await List.findOne({ _id: id })
   res.status(200).json({ list })
 })
