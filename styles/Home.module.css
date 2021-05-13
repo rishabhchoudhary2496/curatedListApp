@@ -173,7 +173,7 @@
   /* display: flex;
   justify-content: center; */
   padding: 1rem 3rem;
-  background-color: #fff;
+  background-color: rgba(0,0,0,0.6);
   background-image: url('../public/lauren-sauder-1OUzxbySjlQ-unsplash.jpg');
   background-size: cover;
   background-blend-mode: multiply;
@@ -197,11 +197,13 @@
   font-size: 1.1rem;
   line-height: 1.7rem;
   font-family: 'Montserrat', sans-serif;
+  color:#fff
 }
 .headingInspiration {
   font-size: 1.5rem;
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
+  color:#fff
 }
 
 @media (max-width: 600px) {

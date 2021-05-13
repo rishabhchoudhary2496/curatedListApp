@@ -45,21 +45,11 @@ export default function Home({ session }) {
             <div className={styles.inspirationText}>
               <p className={styles.headingInspiration}>Inspiration</p>
               <p className={styles.inspiration}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo, omnis quam rerum exercitationem molestias aliquid!
-                Tenetur ipsum sint deleniti porro numquam? Omnis, quam quibusdam
-                consequatur eveniet eos reprehenderit voluptas non quaerat iure
-                reiciendis veniam beatae, est commodi aliquam debitis illum nam
-                magnam dolore id! Adipisci cupiditate facere assumenda ratione
-                laudantium!
+                  I Got the inspiration from seeing people creating awesome 
+                  collections of resources as github repo.so i wanted to take that idea and to create a webapp
+                  where this curated list of resources could be bit more organized and more specialized place for the resources
               </p>
             </div>
-            {/* <Image
-              src='/lauren-sauder-1OUzxbySjlQ-unsplash.jpg'
-              width='600'
-              height='400'
-              className={styles.img}
-            ></Image> */}
           </div>
         </main>
       </div>
